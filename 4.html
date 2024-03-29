@@ -1,33 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>*** 블로그 입니다</header>
-    <nav>
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">DIARY</a></li>
-        <li><a href="#">MEDIA</a></li>
-      </ul>
-    </nav>
-    <article>
-      <section>
-        <form action="">
-          <input type="text" placeholder="아이디" />
-          <input type="password" placeholder="비밀번호" />
-        </form>
-      </section>
-      <section>
-        <h2>안녕하세요!</h2>
-        <p>HTML 실습 과제입니다.</p>
-      </section>
-    </article>
-    <footer>
-      <p>이곳은 footer입니다.</p>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      /* flex-wrap:wrap; */
+    }
+
+    .box1 {
+      display: flex;
+      background-color: pink;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      text-align: center;
+    }
+
+    .box2 {
+
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      background-color: black;
+      height: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .box3 {
+
+      display: flex;
+      flex-direction: row;
+      background-color: #f07e03;
+      height: 500px;
+    }
+
+    .box4 {
+
+      background-color: rgb(255, 191, 0);
+      height: 500px;
+
+    }
+
+    .box5 {
+
+      background-color: greenyellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      color: white;
+      position: relative;
+      right:20px;
+    }
+
+    form{
+      display:flex;
+      gap:5px;
+      flex-direction:column;
+      position: relative;
+      left:30px;
+      top:20px;
+    }
+    input{
+      display: flex;
+      flex-direction: column;
+      width:150px;
+      height:40px;
+      border-radius: 5px;
+    }
+    h2{
+      line-height: 0.5;
+    }
+    p{
+      line-height: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1">
+      <header>*** 블로그 입니다</header>
+    </div>
+    <div class="box2">
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">DIARY</a></li>
+          <li><a href="#">MEDIA</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- <article> -->
+    <div class="box3">
+      <form action="">
+        <input type="text" placeholder="아이디" />
+        <input type="password" placeholder="비밀번호" />
+      </form>
+      <!-- 만약 되면 얘도 태그 div로 -->
+    </div>
+    <div class="box4">
+      <h2>안녕하세요!</h2>
+      <p>HTML 실습 과제입니다.</p>
+    </div>
+    <!-- </article> -->
+    <div class="box5">
+      <footer>
+        <p>이곳은 footer입니다.</p>
+      </footer>
+
+    </div>
+
+  </div>
+</body>
+
 </html>
